@@ -204,15 +204,15 @@ end
 M.exchange_section_above = function()
     local count = vim.v.count1
     vim.cmd("silent! '<,'>move '<--" .. count)
-    vim.cmd.normal('gv')
     restore_dot_repetition(count)
+    vim.cmd.normal('gv')
 end
 
 M.exchange_section_below = function()
     local count = vim.v.count1
     vim.cmd("silent! '<,'>move '>+" .. count)
-    vim.cmd.normal('gv')
     restore_dot_repetition(count)
+    vim.cmd.normal('gv')
 end
 
 M.enable_background = function()
